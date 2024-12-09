@@ -3,6 +3,7 @@
   --light-blue: rgb(0, 210, 214);
   --black: rgb(0, 0, 0);
   --blue: rgb(10, 65, 216);
+  --main-font: "Karla", sans-serif;
 }
 
 html {
@@ -32,7 +33,7 @@ body {
   width: 250px;
   padding: 10px;
   color: black;
-  font-family: "Karla", sans-serif;
+  font-family: var(--main-font);
   font-size: large;
 }
 
@@ -41,9 +42,12 @@ body {
 }
 
 #about {
+  font-family: var(--main-font);
+
   margin-top: 2em;
 }
 .introduction-header {
+  margin-top: 1em;
 }
 .cib {
   max-width: 150px;
