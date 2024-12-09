@@ -13,15 +13,16 @@ body {
 
 .navbar {
   height: 20px;
+  display: flex;
 }
 
 .navbar-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex;
   justify-content: center;
   height: 60px;
+  display: flex;
 }
 .navbar-list li {
   margin: 1.5em;
@@ -37,4 +38,14 @@ body {
 
 .navbar-item:hover {
   color: var(--blue);
+}
+
+#about {
+  margin-top: 2em;
+}
+.introduction-header {
+}
+.cib {
+  max-width: 150px;
+  margin-top: 1rem;
 }
