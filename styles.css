@@ -13,15 +13,16 @@ body {
 }
 
 .navbar {
-  height: 20px;
+  height: 60px;
   display: flex;
+  justify-content: space-between;
+  align-items: left;
 }
 
 .navbar-list {
   list-style-type: none;
   padding: 0;
-  margin: 0;
-  justify-content: center;
+  margin: 0 auto;
   height: 60px;
   display: flex;
 }
@@ -35,8 +36,12 @@ body {
   color: black;
   font-family: var(--main-font);
   font-size: large;
+  cursor: pointer;
 }
 
+.contact-button {
+  margin-left: 0;
+}
 .navbar-item:hover {
   color: var(--blue);
 }

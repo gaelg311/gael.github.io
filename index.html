@@ -13,9 +13,8 @@
       <nav class="navbar">
         <ul class="navbar-list">
           <li><a href="#about" class="navbar-item">About</a></li>
-          <li><a href="#experience" class="navbar-item">Experience</a></li>
+          <li><a href="#skills" class="navbar-item">Skills</a></li>
           <li><a href="#projects" class="navbar-item">Projects</a></li>
-          <li><a href="#contact" class="navbar-item">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -25,20 +24,22 @@
       <section id="about">
         <img src="assets/cib_placeholder.png" class="cib" alt="placeholder" />
         <h1 class="introduction-header">Hello!</h1>
-        <p>
-          Hello! My name is Gael Garcia and I am a Senior at Portland State
-          University studying Computer Science!
+
+        <h2>About Me</h2>
+        <p>Hello! My name is Gael Garcia and I am a Senior at Portland State University studying Computer Science! 
+          My ultimate goal is to be able to use the skills I have learned as a software engineer in order to aid companies 
+          with the creation of a more sustainable environent. Growing up in the Pacific Northwest, I find that now more than ever 
+          it is important to consider how the technology we use affects the world around us, and I want to use my education to help 
+          preserve the place I grew up in! 
         </p>
-        <h2>About Me:</h2>
-        <p></p>
       </section>
 
       <!--Skills/Experience-->
-      <section id="experience">
+      <section id="skills">
         <h2 class="skills-header">Skill Set</h2>
         <h3 class="languages-header">Languages/Software Tools</h3>
         <ul class="skills-list">
-          <li class="skill-item">C/C++</li>
+          <li class="skill-item">C/C++ 
           <li class="skill-item">Python</li>
           <li class="skill-item">HTML/CSS</li>
           <li class="skill-item">PSQL</li>
@@ -47,10 +48,15 @@
         </ul>
         <h3 class="courses-header">Courses Taken</h3>
         <ul class="courses-taken-list">
-          <li class="course-item">CS302</li>
-          <li class="course-item">CS486</li>
-          <li class="course-item">CS314</li>
-          <li class="course-item">CS350</li>
+          <li class="course-item">CS302 - Covered analysis of informal specifications and documentation, unit testing, abstract data types,
+            object-oriented and functional programming design techniques, and use of software libraries</li>
+          <li class="course-item">CS486 - Introduction to fundamental concepts of database management systems using primarily the relational model. 
+            Schema design and refinement. Query languages. Database application development environments. Overview of physical data organization, query optimization and processing, 
+            physical design, security, and transactions used in recovery and concurrency control. </li>
+          <li class="course-item">CS314 - Practical techniques of program development for medium-scale software produced by individuals. 
+            Software development from problem specification through design, implementation, testing, and maintenance</li>
+          <li class="course-item">CS350 - Techniques for the design and analysis of algorithms. Case studies of existing algorithms (sorting, searching, graph algorithms, 
+            dynamic programming, matrix multiplication, fast Fourier transformation). NP-completeness.</li>
         </ul>
       </section>
 
@@ -59,7 +65,7 @@
         <h2>Personal Projects</h2>
         <h3 class="project-title project-goose">Project Golden Goose</h3>
         <section class="grid-container project-grid">
-          <div class="project-image"></div>
+          <div class="project-image"><img src="assets/cib_placeholder.png" class="cib" alt="placeholder"/></div>
           <div class="project-decription golden-goose-desc">
             <p>The goal for Project Golden Goose is to serve as copy of the website <a href="https://www.dndbeyond.com/" class="in-text-link" target="_blank">DNDbeyond</a>, but a bit more accessible for the average player! 
               Although the DNDbeyond website works well enough for the current Fifth Edition ruleset (or 5e for short), that is not to say that it is 
@@ -71,13 +77,13 @@
               and JavaScript to create the current foundation of our site, although it is still in very early development. You can click the links below to see our
               current landing page, as well as view our current working codebase. 
             </p></div>
-          <div class="repository-button goose-repository-button">View Repository</div>
-          <div class="website-button view-goose-site-button">View Current Site</div>
+          <div class="repository-button goose-repository-button"><button class="goose-repository-button">Repository</button> </div>
+          <div class="website-button view-goose-site-button"><button class="visit-goose-site-button">View Current Site</button></div>
         </section>
 
         <h3 class="project-title project-goose">Frupal</h3>
         <section class="grid-container project-grid">
-          <div class="project-image"></div>
+          <div class="project-image"><img class="cib" src="assets/cib_placeholder.png"  alt="placeholder"/></div>
           <div class="project-decription">
             <p>Frupal is a small game developed entirely in Python using its built in GUI Tkinter! The object of the game is fairly 
             simple: navigate throughout the map and attempt to claim all the diamonds without running out of energy! There are items to encounter that will help 
@@ -88,12 +94,33 @@
             executable file on your desktop computer!
             </p>
           </div>
-          <div class="repository-button frupal-repository">View Repository</div>
-          <div class="download-button frupal-download">Download Game!</div>
+          <div class="frupal-repository"><button class="repository-button">Repository</button></div>
+          <div class="frupal-download"><button class="download-button">Download Game!</button> </div>
       </section>
 
-      <!--Contact Form-->
+      <!--Contact Form -->
+      <button id="contact-form-button" class="contact-button">Contact</button>
 
+      <div id="contact-modal "class="modak">
+        <spand id="close-modal" class="close">&times;</spand>
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          </br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          </br>
+          <label for="message">Say something!</label>
+          </br>
+          <textarea type="text" name="message" id="message" rows="4" required></textarea>
+
+          <div class="modal-buttons">
+            <button type="submit" id="submit-button">Submit</button>
+            <button type="reset" id="clear">clear</button>
+          </div>
+        </form>
+      </div>
     </main>
   </body>
 </html>
