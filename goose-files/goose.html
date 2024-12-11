@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Project Grey Goose</title>
+    <meta name="description" content="A Modular TTRPG Website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg" href="goose.svg" />
+    <!-- icon sets -->
+    <script
+      src="https://kit.fontawesome.com/dd875d5aa1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <!-- website title and logo -->
+        <div id="website-title">
+          <a href="goose.html">
+            <img src="./images/goose.svg" alt="Goose Icon" />
+          </a>
+        </div>
+        <!-- global search bar -->
+        <div id="global-search-bar" class="flex-container">
+          <!-- hourglass icon -->
+          <span class="search-icon"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></span>
+          <input
+            id="global-search-box"
+            type="text"
+            placeholder="Search everything"
+          />
+        </div>
+        <!-- nav that appears in header -->
+        <div id="header-nav" class="nav flex-container">
+          <span>Play</span>
+          <span>Create</span>
+          <span>Library</span>
+          <span>Tools</span>
+          <span>Forum</span>
+          <span>Extras</span>
+        </div>
+        <span id="profile"><i class="fa-solid fa-circle-user fa-xl"></i></span>
+      </div>
+      <!-- nav that appears below header on window resize -->
+      <div id="sub-header">
+        <div class="nav flex-container">
+          <span>Play</span>
+          <span>Create</span>
+          <span>Library</span>
+          <span>Tools</span>
+          <span>Forum</span>
+          <span>Extras</span>
+        </div>
+      </div>
+    </header>
+    <div id="main-wrapper" class="wrapper">
+      <!-- left side navigation column -->
+      <div id="side-menu">
+        <span class="side-menu-title">My Creations</span>
+        <ul class="side-menu-list">
+          <li>Campaigns</li>
+          <li>Characters</li>
+          <li>Monsters</li>
+          <li>Items</li>
+          <li>Classes</li>
+          <li>Races</li>
+          <li>Backgrounds</li>
+          <li>Feats</li>
+          <li>Maps</li>
+          <li>Rulesets</li>
+          <li>Soundtracks</li>
+        </ul>
+        <span class="side-menu-title">Shared With Me</span>
+        <ul class="side-menu-list">
+          <li>Campaigns</li>
+          <li>Characters</li>
+          <li>Monsters</li>
+          <li>Items</li>
+          <li>Classes</li>
+          <li>Races</li>
+          <li>Backgrounds</li>
+          <li>Feats</li>
+          <li>Maps</li>
+          <li>Rulesets</li>
+          <li>Soundtracks</li>
+        </ul>
+        <span class="side-menu-title">History</span>
+        <ul class="side-menu-list"></ul>
+      </div>
+      <main>
+        <div class="credits">
+          Icons made from
+          <a href="https://www.onlinewebfonts.com/icon">svg icons</a>is licensed
+          by CC BY 4.0
+        </div>
+      </main>
+    </div>
+    <script type="module" src="./js/items/presets/5e_armor.js"></script>
+  </body>
+</html>
