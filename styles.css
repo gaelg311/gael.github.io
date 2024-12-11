@@ -1,22 +1,50 @@
 :root {
-  --white: rgb(225, 225, 225);
+  --white: rgb(255, 255, 255);
   --light-blue: rgb(0, 210, 214);
+  --light-gray: rgb(187, 187, 187);
   --black: rgb(0, 0, 0);
   --blue: rgb(10, 65, 216);
-  --main-font: "Karla", sans-serif;
-}
+  --main-font: "Karla";
 
-html {
-}
+  background-color: #ffffff;
+  opacity: 1;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      #ffffff 20%,
+      #ffffff 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #ffffff 20%,
+        #ffffff 80%,
+        transparent 80%,
+        transparent
+      )
+      100px 100px,
+    linear-gradient(#b4b4b4 8px, transparent 8px) 0 -4px,
+    linear-gradient(90deg, #b4b4b4 8px, #ffffff 8px) -4px 0;
+  background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
 
-body {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
 }
-
 .navbar {
   height: 60px;
+  background-color: var(--black);
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: left;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-bottom: 10px;
 }
 
 .navbar-list {
@@ -33,9 +61,10 @@ body {
   text-decoration: none;
   width: 250px;
   padding: 10px;
-  color: black;
+  color: var(--white);
   font-family: var(--main-font);
   font-size: large;
+  font-weight: bolder;
   cursor: pointer;
 }
 
@@ -43,22 +72,123 @@ body {
   margin-left: 0;
 }
 .navbar-item:hover {
-  color: var(--blue);
+  color: var(--light-gray);
+}
+
+.profile-pic {
+  display: block;
+  margin: 2rem auto;
+  width: 300px;
+  border-radius: 25px;
 }
 
 #about {
   font-family: var(--main-font);
-
-  margin-top: 2em;
+  text-align: center;
+  margin: 0 auto;
 }
+
 .introduction-header {
   margin-top: 1em;
-}
-.cib {
-  max-width: 150px;
-  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: white;
 }
 
+.about-description {
+  border: 2px solid black;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: white;
+}
+.about-description P {
+  font-weight: bold;
+}
+
+#skills {
+  font-family: var(--main-font);
+}
+#skills-container {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--white);
+}
+.skill-item {
+  font-weight: bold;
+}
+
+.skills-header {
+  text-align: center;
+  font-size: 2em;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 10px;
+}
+.skills-section {
+  padding: 20px;
+}
+#projects {
+  font-family: var(--main-font);
+  text-align: center;
+}
+.projects-header {
+  font-size: 2em;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr, 2fr;
+  grid-template-areas:
+    "image description"
+    "button button";
+  column-gap: 20px;
+  background-color: white;
+}
+.project-title {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.project-picture {
+  grid-area: image;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.project-description {
+  grid-area: description;
+  background-color: var(--white);
+}
+
+.in-text-link {
+  text-decoration: none;
+}
+.in-text-link:hover {
+  background-color: var(--light-gray);
+  border-radius: 10px;
+  border: 3px;
+}
+.project-buttons {
+  grid-area: button;
+  display: flex;
+  justify-content: center;
+}
+.project-button {
+  margin: 10px;
+  border: 2px solid var(--black);
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.project-button:hover {
+  background-color: var(--light-gray);
+  cursor: pointer;
+}
 .modal {
   display: none;
   position: fixed;
@@ -66,8 +196,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  justify-content: center;
-  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-content {
@@ -75,8 +206,24 @@ body {
   padding: 20px;
   width: 300px;
   text-align: center;
+  margin: 15% auto;
+  border-radius: 10px;
 }
 
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content textarea {
+  padding: 10px;
+  margin: 10px;
+  font-size: 1em;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form {
+  border-radius: 10px;
+}
 .close {
   cursor: pointer;
   font-size: 30px;
@@ -87,4 +234,73 @@ body {
 
 .modal-buttons button {
   margin: 10px;
+}
+.project-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+.contact-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: none;
+  margin: 10px;
+  border: 2px solid var(--black);
+  padding: 20px 25px;
+  text-decoration: none;
+  border-radius: 50px;
+}
+.contact-button:hover {
+  background-color: var(--light-gray);
+}
+@media (min-width: 1024px) {
+  #about {
+    width: 80%; /* Reduces the width to 60% on desktop screens */
+    max-width: 1000px;
+    margin: 0 auto; /* Adds larger margins (20% on both sides) */
+  }
+  .about-description {
+    border: 2px solid black;
+    padding: 1%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  #skills {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #projects {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.cib {
+  max-width: 150px;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "description"
+      "button";
+  }
+  .project-image {
+    width: 100%;
+    height: auto;
+  }
+  #skills-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 }
