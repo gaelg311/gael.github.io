@@ -99,10 +99,11 @@
       </section>
 
       <!--Contact Form -->
-      <button id="contact-form-button" class="contact-button">Contact</button>
+      <button id="contact-button" class="contact-button">Contact</button>
 
-      <div id="contact-modal "class="modak">
-        <spand id="close-modal" class="close">&times;</spand>
+      <div id="contact-modal"class="modal">
+        <div class="modal-content">
+        <span  role="button" id="close-modal" class="close">&times;</span>
         <h2>Contact Me</h2>
         <form id="contact-form">
           <label for="name">Name:</label>
@@ -111,16 +112,18 @@
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required>
           </br>
-          <label for="message">Say something!</label>
-          </br>
+          <label for="message">Say something!</label?->
           <textarea type="text" name="message" id="message" rows="4" required></textarea>
 
           <div class="modal-buttons">
             <button type="submit" id="submit-button">Submit</button>
-            <button type="reset" id="clear">clear</button>
+            <button type="reset" id="clear-button">clear</button>
           </div>
         </form>
+        </div>
       </div>
+
+      <script src="main.js"></script>
     </main>
   </body>
 </html>
